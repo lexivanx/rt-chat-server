@@ -2,7 +2,7 @@
 
 This is a real-time chat application implemented in C++. The application includes both a server and a client, which can be used to send and receive messages in real-time.
 
-## Deatures
+## Features
 The chat application includes the following features:
 
 - Real-time messaging: Messages are sent and received in real-time.
