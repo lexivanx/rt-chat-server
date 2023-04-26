@@ -5,6 +5,7 @@
 
 class IoTCommunication {
 public:
+    IoTCommunication();
     IoTCommunication(const std::string& host, unsigned short port);
     ~IoTCommunication();
 
@@ -12,6 +13,7 @@ public:
     bool disconnect();
     int sendCommand(const std::string& command);
     int receiveResponse(std::string& response, int maxBytes);
+    void setHostAndPort(const std::string& host, unsigned short port);
 
 private:
     SocketWrapper m_iotSocket;
