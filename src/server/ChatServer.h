@@ -1,6 +1,7 @@
 #pragma once
 
-#include "SocketWrapper.h"
+#include "../common/SocketWrapper.h"
+#include "../iot/IoTCommunication.h"
 
 #include <string>
 
@@ -14,6 +15,9 @@ public:
 private:
     unsigned short m_port;
     SocketWrapper m_serverSocket;
+    IoTCommunication m_iotComm;
 
     void handleClient(SocketWrapper clientSocket);
+    void handleIoTCommand(const std::string& command);
+    void loadIoTDeviceConfig(std::string& host, unsigned short& port);
 };
